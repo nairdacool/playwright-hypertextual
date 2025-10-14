@@ -21,10 +21,6 @@ test.describe('Search Article Tests', () => {
         await landingPage.acceptPrivacyDisclaimerIfVisible();
     });
 
-    test.afterAll(async ({ page }) => {
-        await page.close();
-    });
-
     test('Search for an article and verify results', async () => {
         await landingPage.clickSearchIcon();
         await landingPage.searchForArticle(searchForArticleThatContains);
