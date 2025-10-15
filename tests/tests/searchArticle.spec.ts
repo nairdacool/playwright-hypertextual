@@ -4,7 +4,7 @@ import { SearchResultsPage } from '../../pages/SearchResultsPage';
 import { ArticlePage } from '../../pages/ArticlePage';
 import { NewsletterPage } from '../../pages/NewsletterPage';
 
-test.describe('Search Article Tests', () => {
+test.describe.parallel('Search Article Tests', () => {
     let landingPage: LandingPage;
     let searchResultsPage: SearchResultsPage;
     let articlePage: ArticlePage;
@@ -41,7 +41,7 @@ test.describe('Search Article Tests', () => {
     });
 
     test('Subscribe to newsletter on the landing page', async () => {
-        await test.step('Select the newsletter subscription option', async () => {
+        await test.step('Select the newsletter option in the main menu', async () => {
             await landingPage.selectOptionFromMainMenu(menuOption);
         });
         await test.step('Verify the newsletter subscription form is visible', async () => {

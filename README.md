@@ -56,6 +56,10 @@ Run all tests:
 ```bash
 npx playwright test
 ```
+Run all tests in parallel:
+```bash
+npx playwright test --workers=4
+```
 Run headed (visually):
 ```bash
 npx playwright test --headed
