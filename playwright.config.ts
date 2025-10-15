@@ -5,8 +5,8 @@ export default defineConfig({
   timeout: 30000,
   retries: 1,
   use: {
-    headless: false,
-    viewport:  { width: 1920, height: 1080 }, // Full HD resolution
+    headless: true,
+    viewport: { width: 1280, height: 720 }, 
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     baseURL: 'https://hipertextual.com/',

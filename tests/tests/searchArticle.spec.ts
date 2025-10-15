@@ -22,10 +22,16 @@ test.describe('Search Article Tests', () => {
     });
 
     test('Search for an article and verify results', async () => {
-        await landingPage.clickSearchIcon();
-        await landingPage.searchForArticle(searchForArticleThatContains);
-        await searchResultsPage.clickEntryHeaderContaining(keywordToSearch);
-        await articlePage.verifyArticleTitle(articleTitle);
-        await articlePage.verifyArticleUrlContains(articleUrlSlug);
+        await test.step('Open the search and submit a query', async () => {
+            await landingPage.clickSearchIcon();
+            await landingPage.searchForArticle(searchForArticleThatContains);           
+        }); 
+        await test.step('Find a matching entry and open it', async () => {
+            await searchResultsPage.clickEntryHeaderContaining(keywordToSearch);
+        });
+        await test.step('Verify the article title and URL', async () => {
+            await articlePage.verifyArticleTitle(articleTitle);
+            await articlePage.verifyArticleUrlContains(articleUrlSlug);
+        });
     });
 });

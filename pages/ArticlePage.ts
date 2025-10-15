@@ -17,7 +17,7 @@ export class ArticlePage {
 
     async verifyArticleUrlContains(expectedSlug: string) {
         const url = this.page.url();
-        console.log('Current article URL:', url);
-        expect(url).toContain(expectedSlug);
+        console.log('Current URL containst the expected slug:', url.includes(expectedSlug), url);
+        await expect(this.page).toHaveURL(new RegExp(expectedSlug), { timeout: 5000 });
     }
 }
