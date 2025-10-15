@@ -8,6 +8,7 @@ export class LandingPage {
     readonly searchInput: Locator;
     readonly pageHeader: Locator;
     readonly searchedInput: Locator;
+    readonly mainMenu: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -17,6 +18,7 @@ export class LandingPage {
         this.searchInput = page.locator('#search-form-2');
         this.pageHeader = page.locator('.page-header');
         this.searchedInput = page.locator('#search-form-3');
+        this.mainMenu = page.locator('#menu-header-1');
     }
 
     async acceptPrivacyDisclaimerIfVisible() {
@@ -35,5 +37,29 @@ export class LandingPage {
         await this.searchInput.fill(articleTitle).then(() => this.searchInput.press('Enter'));
         await expect(this.pageHeader).toBeVisible();
         await expect(this.searchedInput).toHaveValue(articleTitle);
+    }
+
+    async selectOptionFromMainMenu(menuOption: string) {
+        await this.mainMenu.waitFor({ state: 'visible', timeout: 5000 });
+
+        const items = this.mainMenu.locator('li');
+        const count = await items.count();
+
+        for (let i = 0; i < count; i++) {
+            const item = items.nth(i);
+            const text = (await item.textContent()) ?? '';
+
+            if (text.includes(menuOption)) { 
+                const link = item.locator('a').first();
+                if ((await link.count()) > 0) {
+                    await link.click();
+                } else {
+                    await item.click();
+                }
+                return;
+            }
+        }
+
+        throw new Error(`Menu option containing "${menuOption}" was not found in the main menu.`);
     }
 }
