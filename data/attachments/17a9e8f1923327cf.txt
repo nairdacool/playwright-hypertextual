@@ -1,0 +1,334 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - complementary [ref=e2]
+  - complementary [ref=e3]
+  - generic [ref=e4]:
+    - link "Saltar al contenido" [ref=e5] [cursor=pointer]:
+      - /url: "#main"
+    - generic [ref=e6]:
+      - generic:
+        - generic:
+          - generic:
+            - iframe
+    - banner [ref=e9]:
+      - generic [ref=e11]:
+        - navigation "Menú de enlaces sociales" [ref=e13]:
+          - list [ref=e14]:
+            - listitem [ref=e15]:
+              - link "Twitter" [ref=e16] [cursor=pointer]:
+                - /url: https://twitter.com/hipertextual
+                - generic [ref=e17]: Twitter
+                - img [ref=e18]
+            - listitem [ref=e20]:
+              - link "Facebook" [ref=e21] [cursor=pointer]:
+                - /url: https://facebook.com/hipertextual
+                - generic [ref=e22]: Facebook
+                - img [ref=e23]
+            - listitem [ref=e25]:
+              - link "Instagram" [ref=e26] [cursor=pointer]:
+                - /url: https://instagram.com/hipertextual
+                - generic [ref=e27]: Instagram
+                - img [ref=e28]
+            - listitem [ref=e30]:
+              - link "YouTube" [ref=e31] [cursor=pointer]:
+                - /url: https://youtube.com/hipertextual
+                - generic [ref=e32]: YouTube
+                - img [ref=e33]
+            - listitem [ref=e35]:
+              - link "Flipboard" [ref=e36] [cursor=pointer]:
+                - /url: https://flipboard.com/@hipertextual
+                - generic [ref=e37]: Flipboard
+                - img [ref=e38]
+            - listitem [ref=e40]:
+              - link "Google News" [ref=e41] [cursor=pointer]:
+                - /url: https://news.google.com/publications/CAAqBwgKMJfi_Aow4vznAg
+                - generic [ref=e42]: Google News
+                - img [ref=e43]
+        - generic [ref=e45]:
+          - link "Hipertextual" [ref=e46] [cursor=pointer]:
+            - /url: https://hipertextual.com/
+            - img "Hipertextual" [ref=e47]
+          - generic:
+            - paragraph [ref=e48]:
+              - link "Hipertextual" [ref=e49] [cursor=pointer]:
+                - /url: https://hipertextual.com/
+            - paragraph [ref=e50]: Tecnología, ciencia y cultura digital
+        - button "Open Search" [active] [ref=e53] [cursor=pointer]:
+          - generic [ref=e54]: Open Search
+          - img [ref=e56]
+      - navigation "Menú Superior" [ref=e62]:
+        - list [ref=e63]:
+          - listitem [ref=e64]:
+            - link "Tecnología" [ref=e65] [cursor=pointer]:
+              - /url: https://hipertextual.com/tecnologia/
+            - button "Open dropdown menu":
+              - img
+              - generic: Open dropdown menu
+          - listitem [ref=e66]:
+            - link "Entretenimiento" [ref=e67] [cursor=pointer]:
+              - /url: https://hipertextual.com/cine-television/
+          - listitem [ref=e68]:
+            - link "Vehículos" [ref=e69] [cursor=pointer]:
+              - /url: https://hipertextual.com/movilidad/
+          - listitem [ref=e70]:
+            - link "IA" [ref=e71] [cursor=pointer]:
+              - /url: https://hipertextual.com/inteligencia-artificial/
+          - listitem [ref=e72]:
+            - link "Futuro" [ref=e73] [cursor=pointer]:
+              - /url: http://youtube.com/@en-el-futuro
+          - listitem [ref=e74]:
+            - link "Newsletter" [ref=e75] [cursor=pointer]:
+              - /url: https://hipertextual.com/newsletter/
+    - main [ref=e79]:
+      - article [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e85]:
+            - article [ref=e86]:
+              - figure [ref=e87]:
+                - link [ref=e88] [cursor=pointer]:
+                  - /url: https://hipertextual.com/ciencia/personas-enamoradas-ia/
+                  - img [ref=e89]
+              - generic [ref=e90]:
+                - 'heading "Enamorados de la IA: ¿el amor por un algoritmo es el futuro o se nos está yendo de las manos?" [level=2] [ref=e91]':
+                  - 'link "Enamorados de la IA: ¿el amor por un algoritmo es el futuro o se nos está yendo de las manos?" [ref=e92] [cursor=pointer]':
+                    - /url: https://hipertextual.com/ciencia/personas-enamoradas-ia/
+                - generic [ref=e94]:
+                  - text: por
+                  - link "Azucena Martín" [ref=e96] [cursor=pointer]:
+                    - /url: https://hipertextual.com/autor/azucenamartin/
+            - article [ref=e97]:
+              - figure [ref=e98]:
+                - link [ref=e99] [cursor=pointer]:
+                  - /url: https://hipertextual.com/cine-television/una-casa-llena-de-dinamita-final-explicado-netflix/
+                  - img [ref=e100]
+              - generic [ref=e101]:
+                - 'heading "El polémico final de ‘Una casa llena de dinamita’, explicado: ¿Qué pasa en la película de Netflix?" [level=2] [ref=e102]':
+                  - 'link "El polémico final de ‘Una casa llena de dinamita’, explicado: ¿Qué pasa en la película de Netflix?" [ref=e103] [cursor=pointer]':
+                    - /url: https://hipertextual.com/cine-television/una-casa-llena-de-dinamita-final-explicado-netflix/
+                - generic [ref=e105]:
+                  - text: por
+                  - link "Gonzalo Franco" [ref=e107] [cursor=pointer]:
+                    - /url: https://hipertextual.com/autor/gonzalofranco/
+            - article [ref=e108]:
+              - figure [ref=e109]:
+                - link [ref=e110] [cursor=pointer]:
+                  - /url: https://hipertextual.com/tecnologia/dreame-aqua10-ultra-track-complete-analisis/
+                  - img [ref=e111]
+              - generic [ref=e112]:
+                - 'heading "Dreame Aqua10 Ultra Track Complete, análisis: un robot aspirador excelente al que no se le resiente ningún obstáculo" [level=2] [ref=e113]':
+                  - 'link "Dreame Aqua10 Ultra Track Complete, análisis: un robot aspirador excelente al que no se le resiente ningún obstáculo" [ref=e114] [cursor=pointer]':
+                    - /url: https://hipertextual.com/tecnologia/dreame-aqua10-ultra-track-complete-analisis/
+                - generic [ref=e116]:
+                  - text: por
+                  - link "Alberto Martín" [ref=e118] [cursor=pointer]:
+                    - /url: https://hipertextual.com/autor/albertomartin/
+            - article [ref=e119]:
+              - figure [ref=e120]:
+                - link [ref=e121] [cursor=pointer]:
+                  - /url: https://hipertextual.com/cine-television/entrevista-andy-muschietti-barbara-muschietti-it-bienvenidos-a-derry/
+                  - img [ref=e122]
+              - generic [ref=e123]:
+                - 'heading "Los creadores de ‘IT: Bienvenidos a Derry’ prometen nuevas transformaciones de Pennywise: «Esto es un animal distinto»" [level=2] [ref=e124]':
+                  - 'link "Los creadores de ‘IT: Bienvenidos a Derry’ prometen nuevas transformaciones de Pennywise: «Esto es un animal distinto»" [ref=e125] [cursor=pointer]':
+                    - /url: https://hipertextual.com/cine-television/entrevista-andy-muschietti-barbara-muschietti-it-bienvenidos-a-derry/
+                - generic [ref=e127]:
+                  - text: por
+                  - link "Gonzalo Franco" [ref=e129] [cursor=pointer]:
+                    - /url: https://hipertextual.com/autor/gonzalofranco/
+          - generic [ref=e131]:
+            - generic [ref=e132]:
+              - generic [ref=e135]:
+                - article [ref=e136]:
+                  - figure [ref=e137]:
+                    - link [ref=e138] [cursor=pointer]:
+                      - /url: https://hipertextual.com/inteligencia-artificial/openai-se-reestructura-nuevo-acuerdo-microsoft/
+                      - img [ref=e139]
+                  - generic [ref=e140]:
+                    - link "Inteligencia artificial" [ref=e142] [cursor=pointer]:
+                      - /url: https://hipertextual.com/inteligencia-artificial/
+                    - heading "OpenAI completa su reestructuración y blinda su futuro con un nuevo acuerdo con Microsoft" [level=2] [ref=e143]:
+                      - link "OpenAI completa su reestructuración y blinda su futuro con un nuevo acuerdo con Microsoft" [ref=e144] [cursor=pointer]:
+                        - /url: https://hipertextual.com/inteligencia-artificial/openai-se-reestructura-nuevo-acuerdo-microsoft/
+                    - generic [ref=e145]: Después de una ardua negociación, OpenAI y Microsoft han firmado un nuevo acuerdo que ha permitido la reestructuración de la startup de IA.
+                - article [ref=e146]:
+                  - figure [ref=e147]:
+                    - link [ref=e148] [cursor=pointer]:
+                      - /url: https://hipertextual.com/software/adobe-firefly-chatbots-express-photoshop-mas-novedades-max-2025/
+                      - img [ref=e149]
+                  - generic [ref=e150]:
+                    - link "Software" [ref=e152] [cursor=pointer]:
+                      - /url: https://hipertextual.com/software/
+                    - 'heading "Adobe lleva Firefly a otro nivel: mejor generación de imágenes y nuevos chatbots que editan por ti en Express y Photoshop" [level=2] [ref=e153]':
+                      - 'link "Adobe lleva Firefly a otro nivel: mejor generación de imágenes y nuevos chatbots que editan por ti en Express y Photoshop" [ref=e154] [cursor=pointer]':
+                        - /url: https://hipertextual.com/software/adobe-firefly-chatbots-express-photoshop-mas-novedades-max-2025/
+                    - generic [ref=e155]: En el marco de Adobe MAX se presentaron varias novedades vinculadas con Firefly y herramientas de IA para las aplicaciones de la compañía.
+                - article [ref=e156]:
+                  - figure [ref=e157]:
+                    - link [ref=e158] [cursor=pointer]:
+                      - /url: https://hipertextual.com/cine-television/one-piece-live-action-fecha-estreno-temporada-2/
+                      - img [ref=e159]
+                  - generic [ref=e160]:
+                    - link "Series y Películas" [ref=e162] [cursor=pointer]:
+                      - /url: https://hipertextual.com/cine-television/
+                    - heading "‘One Piece’ anuncia por fin la fecha de estreno de la temporada 2 del live-action en Netflix" [level=2] [ref=e163]:
+                      - link "‘One Piece’ anuncia por fin la fecha de estreno de la temporada 2 del live-action en Netflix" [ref=e164] [cursor=pointer]:
+                        - /url: https://hipertextual.com/cine-television/one-piece-live-action-fecha-estreno-temporada-2/
+                    - generic [ref=e165]: Netflix anuncia al fin la fecha de estreno de la temporada 2 de ‘One Piece’, que tiene nuevas imágenes de la Isla de Drum.
+                - article [ref=e166]:
+                  - figure [ref=e167]:
+                    - link [ref=e168] [cursor=pointer]:
+                      - /url: https://hipertextual.com/cine-television/habra-chainsaw-man-la-pelicula-arco-de-reze-parte-2/
+                      - img [ref=e169]
+                  - generic [ref=e170]:
+                    - link "Series y Películas" [ref=e172] [cursor=pointer]:
+                      - /url: https://hipertextual.com/cine-television/
+                    - 'heading "¿Habrá ‘Chainsaw Man – La película: Arco de Reze’ – Parte 2?" [level=2] [ref=e173]':
+                      - 'link "¿Habrá ‘Chainsaw Man – La película: Arco de Reze’ – Parte 2?" [ref=e174] [cursor=pointer]':
+                        - /url: https://hipertextual.com/cine-television/habra-chainsaw-man-la-pelicula-arco-de-reze-parte-2/
+                    - generic [ref=e175]: "El éxito de ‘Chainsaw Man – La película: Arco de Reze’ ha llevado a los fans a preguntarse si la cinta tendrá secuela."
+              - generic [ref=e178]:
+                - heading "Nuestros partners" [level=2] [ref=e179]
+                - article [ref=e180]:
+                  - figure [ref=e181]:
+                    - link [ref=e182] [cursor=pointer]:
+                      - /url: https://hipertextual.com/patrocinado/tienda-propia-xiaomi/
+                      - img [ref=e183]
+                  - generic [ref=e184]:
+                    - generic [ref=e186]: Branded content
+                    - heading "He estado en la primera tienda propia de Xiaomi y es una auténtica pasada" [level=3] [ref=e187]:
+                      - link "He estado en la primera tienda propia de Xiaomi y es una auténtica pasada" [ref=e188] [cursor=pointer]:
+                        - /url: https://hipertextual.com/patrocinado/tienda-propia-xiaomi/
+                    - generic [ref=e190]:
+                      - img "Xiaomi" [ref=e192]
+                      - generic [ref=e193]: "Patrocinado por: Xiaomi"
+                - article [ref=e194]:
+                  - figure [ref=e195]:
+                    - link [ref=e196] [cursor=pointer]:
+                      - /url: https://hipertextual.com/patrocinado/vivo-v60-lite-gama-media/
+                      - img [ref=e197]
+                  - generic [ref=e198]:
+                    - generic [ref=e200]: Branded content
+                    - heading "vivo V60 Lite 5G, el teléfono que viene a solucionar el gran problema de muchas personas, y con un precio rompedor" [level=3] [ref=e201]:
+                      - link "vivo V60 Lite 5G, el teléfono que viene a solucionar el gran problema de muchas personas, y con un precio rompedor" [ref=e202] [cursor=pointer]:
+                        - /url: https://hipertextual.com/patrocinado/vivo-v60-lite-gama-media/
+                    - generic [ref=e204]:
+                      - img "vivo" [ref=e206]
+                      - generic [ref=e207]: "Patrocinado por: vivo"
+                - article [ref=e208]:
+                  - figure [ref=e209]:
+                    - link [ref=e210] [cursor=pointer]:
+                      - /url: https://hipertextual.com/patrocinado/quantum-dots-samsung/
+                      - img [ref=e211]
+                  - generic [ref=e212]:
+                    - generic [ref=e214]: Branded content
+                    - heading "¿Sabes qué son los Quantum Dots y cómo influyen en la calidad de imagen de tu televisor?" [level=3] [ref=e215]:
+                      - link "¿Sabes qué son los Quantum Dots y cómo influyen en la calidad de imagen de tu televisor?" [ref=e216] [cursor=pointer]:
+                        - /url: https://hipertextual.com/patrocinado/quantum-dots-samsung/
+                    - generic [ref=e218]:
+                      - img "Samsung" [ref=e220]
+                      - generic [ref=e221]: "Patrocinado por: Samsung"
+            - generic [ref=e226]:
+              - article [ref=e227]:
+                - figure [ref=e228]:
+                  - link [ref=e229] [cursor=pointer]:
+                    - /url: https://hipertextual.com/ofertas-descuentos/llevo-recomendando-este-xiaomi-desde-que-salio-ahora-que-esta-a-precio-de-risa-no-se-me-ocurre-mejor-compra-en-2025/
+                    - img [ref=e230]
+                - generic [ref=e231]:
+                  - link "Ofertas y descuentos" [ref=e233] [cursor=pointer]:
+                    - /url: https://hipertextual.com/ofertas-descuentos/
+                  - 'heading "Llevo recomendando este Xiaomi desde que salió: ahora que está a precio de risa no se me ocurre mejor compra en 2025" [level=2] [ref=e234]':
+                    - 'link "Llevo recomendando este Xiaomi desde que salió: ahora que está a precio de risa no se me ocurre mejor compra en 2025" [ref=e235] [cursor=pointer]':
+                      - /url: https://hipertextual.com/ofertas-descuentos/llevo-recomendando-este-xiaomi-desde-que-salio-ahora-que-esta-a-precio-de-risa-no-se-me-ocurre-mejor-compra-en-2025/
+                  - generic [ref=e236]: El Xiaomi 15T Pro baja de precio por primera vez desde su lanzamiento y se convierte en la oferta del año. Es muy difícil no recomendarlo.
+              - article [ref=e237]:
+                - figure [ref=e238]:
+                  - link [ref=e239] [cursor=pointer]:
+                    - /url: https://hipertextual.com/cine-television/star-wars-resucita-pelicula-cancelada-y-la-convertira-en-serie/
+                    - img [ref=e240]
+                - generic [ref=e241]:
+                  - link "Series y Películas" [ref=e243] [cursor=pointer]:
+                    - /url: https://hipertextual.com/cine-television/
+                  - 'heading "‘Star Wars’ da la sorpresa: resucitará una película cancelada… pero no exactamente como se esperaba" [level=2] [ref=e244]':
+                    - 'link "‘Star Wars’ da la sorpresa: resucitará una película cancelada… pero no exactamente como se esperaba" [ref=e245] [cursor=pointer]':
+                      - /url: https://hipertextual.com/cine-television/star-wars-resucita-pelicula-cancelada-y-la-convertira-en-serie/
+                  - generic [ref=e246]: Lucasfilm ha puesto en marcha una película de ‘Star Wars’ cancelada hace años para estrenarla como serie en Disney+.
+              - article [ref=e247]:
+                - figure [ref=e248]:
+                  - link [ref=e249] [cursor=pointer]:
+                    - /url: https://hipertextual.com/apple/el-proximo-iphone-barato-esta-mas-cerca-de-lo-que-piensas-y-trae-novedades-muy-esperadas/
+                    - img [ref=e250]
+                - generic [ref=e251]:
+                  - link "Apple" [ref=e253] [cursor=pointer]:
+                    - /url: https://hipertextual.com/apple/
+                  - heading "El próximo iPhone barato está más cerca de lo que piensas, y trae novedades muy esperadas" [level=2] [ref=e254]:
+                    - link "El próximo iPhone barato está más cerca de lo que piensas, y trae novedades muy esperadas" [ref=e255] [cursor=pointer]:
+                      - /url: https://hipertextual.com/apple/el-proximo-iphone-barato-esta-mas-cerca-de-lo-que-piensas-y-trae-novedades-muy-esperadas/
+                  - generic [ref=e256]: Todo apunta a que Apple renovará su línea económica durante 2026 con el iPhone 17e. Y ya conocemos uno de sus detalles.
+              - article [ref=e257]:
+                - figure [ref=e258]:
+                  - link [ref=e259] [cursor=pointer]:
+                    - /url: https://hipertextual.com/cine-television/secuela-erase-una-vez-en-hollywood-brad-pitt-fecha-de-estreno/
+                    - img [ref=e260]
+                - generic [ref=e261]:
+                  - link "Series y Películas" [ref=e263] [cursor=pointer]:
+                    - /url: https://hipertextual.com/cine-television/
+                  - heading "La secuela de ‘Érase una vez en Hollywood’ con Brad Pitt ya tiene fecha de estreno" [level=2] [ref=e264]:
+                    - link "La secuela de ‘Érase una vez en Hollywood’ con Brad Pitt ya tiene fecha de estreno" [ref=e265] [cursor=pointer]:
+                      - /url: https://hipertextual.com/cine-television/secuela-erase-una-vez-en-hollywood-brad-pitt-fecha-de-estreno/
+                  - generic [ref=e266]: Netflix ha confirmado cuándo tiene programada la fecha de estreno de la esperada secuela de ‘Érase una vez en Hollywood’.
+          - generic [ref=e273]:
+            - article [ref=e274]:
+              - figure [ref=e275]:
+                - link [ref=e276] [cursor=pointer]:
+                  - /url: https://hipertextual.com/mobile/como-liberar-espacio-en-whatsapp-con-este-nuevo-metodo/
+                  - img [ref=e277]
+              - generic [ref=e278]:
+                - link "Mobile" [ref=e280] [cursor=pointer]:
+                  - /url: https://hipertextual.com/mobile/
+                - 'heading "El nuevo método para liberar espacio en WhatsApp es una maravilla: nunca hemos visto algo tan útil" [level=2] [ref=e281]':
+                  - 'link "El nuevo método para liberar espacio en WhatsApp es una maravilla: nunca hemos visto algo tan útil" [ref=e282] [cursor=pointer]':
+                    - /url: https://hipertextual.com/mobile/como-liberar-espacio-en-whatsapp-con-este-nuevo-metodo/
+                - generic [ref=e283]: Así puedes liberar espacio en WhatsApp fácilmente y saber cuánto almacenamiento interno ocupa cada chat.
+            - article [ref=e284]:
+              - figure [ref=e285]:
+                - link [ref=e286] [cursor=pointer]:
+                  - /url: https://hipertextual.com/tecnologia/dji-romo-asi-es-su-primer-robot-aspirador-basado-en-su-tecnologia-de-drones/
+                  - img [ref=e287]
+              - generic [ref=e288]:
+                - link "Tecnología" [ref=e290] [cursor=pointer]:
+                  - /url: https://hipertextual.com/tecnologia/
+                - 'heading "DJI Romo: así es su primer robot aspirador basado en su tecnología de drones" [level=2] [ref=e291]':
+                  - 'link "DJI Romo: así es su primer robot aspirador basado en su tecnología de drones" [ref=e292] [cursor=pointer]':
+                    - /url: https://hipertextual.com/tecnologia/dji-romo-asi-es-su-primer-robot-aspirador-basado-en-su-tecnologia-de-drones/
+                - generic [ref=e293]: El DJI Romo es el primer robot del fabricante de drones que aprovecha su tecnología para sortear obstáculos con un diseño rompedor.
+            - article [ref=e294]:
+              - figure [ref=e295]:
+                - link [ref=e296] [cursor=pointer]:
+                  - /url: https://hipertextual.com/economia-empresas/amazon-despidos-inteligencia-artificial/
+                  - img [ref=e297]
+              - generic [ref=e298]:
+                - link "Economía y Empresas" [ref=e300] [cursor=pointer]:
+                  - /url: https://hipertextual.com/economia-empresas/
+                - heading "Amazon se prepara para anunciar los mayores despidos de su historia" [level=2] [ref=e301]:
+                  - link "Amazon se prepara para anunciar los mayores despidos de su historia" [ref=e302] [cursor=pointer]:
+                    - /url: https://hipertextual.com/economia-empresas/amazon-despidos-inteligencia-artificial/
+                - generic [ref=e303]: Amazon se prepara para despedir más de 30.000 empleados por culpa de la IA. El recorte afectará a todas sus divisiones, incluida AWS.
+            - article [ref=e304]:
+              - figure [ref=e305]:
+                - link [ref=e306] [cursor=pointer]:
+                  - /url: https://hipertextual.com/economia-empresas/irobot-roomba-serios-problemas-podria-declararse-en-bancarrota/
+                  - img [ref=e307]
+              - generic [ref=e308]:
+                - link "Economía y Empresas" [ref=e310] [cursor=pointer]:
+                  - /url: https://hipertextual.com/economia-empresas/
+                - 'heading "iRobot, en serios problemas: el fabricante de aspiradores Roomba podría declararse en bancarrota" [level=2] [ref=e311]':
+                  - 'link "iRobot, en serios problemas: el fabricante de aspiradores Roomba podría declararse en bancarrota" [ref=e312] [cursor=pointer]':
+                    - /url: https://hipertextual.com/economia-empresas/irobot-roomba-serios-problemas-podria-declararse-en-bancarrota/
+                - generic [ref=e313]: iRobot no levanta cabeza y advierte que podría declararse en bancarrota tras un nuevo fracaso en su intento por venderse.
+          - paragraph
+  - iframe
+  - iframe
+  - iframe
+```
