@@ -1,0 +1,3 @@
+Found article Title Text match: 
+			Reed Jobs, hijo de Steve Jobs, lanza un fondo millonario para financiar nuevos tratamientos contra el cáncer		
+Current URL containst the expected slug: true https://hipertextual.com/economia-empresas/reed-jobs-hijo-steve-jobs-yosemite-nuevos-tratamientos-cancer/
