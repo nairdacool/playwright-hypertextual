@@ -12,5 +12,15 @@ export default defineConfig({
     video: 'retain-on-failure',
     baseURL: 'https://hipertextual.com/',
   },
-  reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]],
+  reporter: [
+    ['list'], 
+    ['allure-playwright'],
+    [
+      'html', 
+      { 
+        outputFolder: 'playwright-report',
+        reportOnSingleRun: true, 
+     }
+    ]
+  ],
 });

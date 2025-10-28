@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "clean:reports": "rm -rf playwright-report test-results .run .allure-results allure-report allure-results || true"
   },
   "keywords": [],
   "author": "",
