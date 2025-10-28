@@ -2,9 +2,9 @@ name: CI - Playwright Tests (Allure -> GitHub Pages)
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [master]
   push:
-    branches: [ master ]
+    branches: [master]
 
 concurrency:
   group: ci-playwright-${{ github.ref }}
@@ -23,8 +23,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: "18"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -37,6 +37,7 @@ jobs:
       - name: Run Playwright (Allure results)
         env:
           CI: true
+          ALLURE_RESULTS_DIR: .run/reports/allure/results
         run: |
           rm -rf .run/reports/allure
           mkdir -p .run/reports/allure/results
@@ -47,6 +48,23 @@ jobs:
         run: |
           npx allure generate .run/reports/allure/results -o .run/reports/allure/report --clean || echo "no allure results"
 
+      - name: List generated report files (debug)
+        if: always()
+        run: |
+          echo "Allure results folder:"
+          ls -la .run/reports/allure/results || true
+          echo "Allure report folder:"
+          ls -la .run/reports/allure/report || true
+
+      - name: Check Allure report exists
+        id: check_report
+        if: always()
+        run: |
+          if [ -d ".run/reports/allure/report" ] && [ "$(ls -A .run/reports/allure/report)" ]; then
+            echo "report_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "report_exists=false" >> $GITHUB_OUTPUT
+          fi
       - name: Upload Allure artifact (for debugging)
         if: always()
         uses: actions/upload-artifact@v4
@@ -55,7 +73,7 @@ jobs:
           path: .run/reports/allure
 
       - name: Deploy Allure HTML to GitHub Pages (gh-pages)
-        if: always()
+        if: steps.check_report.outputs.report_exists == 'true'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
