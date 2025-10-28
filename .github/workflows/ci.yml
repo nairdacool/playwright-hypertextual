@@ -1,4 +1,4 @@
-name: CI - Playwright Tests (Allure)
+name: CI - Playwright Tests
 
 on:
   pull_request:
@@ -17,55 +17,25 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js (Using Node 20 LTS)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Updated to the current LTS version for better stability
+          node-version: '18'
           cache: 'npm'
 
-      - name: Install dependencies (Playwright, Allure Reporter, Allure CLI)
-        # CRITICAL FIX: Assumes 'allure-playwright' and 'allure-commandline' are in package.json.
-        # 'npm ci' installs them reliably, eliminating the separate, fragile 'npm install --no-save' step.
+      - name: Install dependencies
         run: npm ci
-        env:
-          CI: true
 
-      - name: Install Playwright browsers (with deps)
+      - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests (generate Allure results)
-        run: |
-          # Clean up and ensure results dir exists
-          rm -rf allure-results allure-report playwright-report test-results
-          mkdir -p allure-results
-          # Run tests and emit allure results
-          npx playwright test --reporter=list,allure-playwright
+      - name: Run tests
+        run: npx playwright test --reporter=list
         env:
           CI: true
-
-      # Always attempt to generate the Allure HTML report (for artifact upload)
-      - name: Generate Allure report
-        if: always()
-        run: |
-          # Generate HTML from allure-results --> allure-report
-          npx allure generate allure-results -o allure-report --clean || echo "Allure generate failed or no results"
-
-      - name: Upload Allure HTML report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: allure-report
-
-      - name: Upload Allure raw results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results-raw # Renamed for clarity vs. HTML report
-          path: allure-results
 
       - name: Upload Playwright HTML report
         if: always()
