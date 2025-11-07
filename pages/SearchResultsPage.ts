@@ -1,4 +1,4 @@
-import { Page, Locator, expect } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
 export class SearchResultsPage {
     readonly page: Page;
@@ -18,7 +18,7 @@ export class SearchResultsPage {
             const headers = await this.resultsList.all();
             for (const header of headers) {
                 const text = await header.textContent();
-                if (text && text.toLowerCase().includes(searchedWord.toLowerCase())) {
+                if (text?.toLowerCase()?.includes(searchedWord.toLowerCase())) {
                     await header.scrollIntoViewIfNeeded();
                     await header.click();
                     return;
