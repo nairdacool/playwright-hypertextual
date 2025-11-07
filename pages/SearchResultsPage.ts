@@ -18,7 +18,7 @@ export class SearchResultsPage {
             const headers = await this.resultsList.all();
             for (const header of headers) {
                 const text = await header.textContent();
-                if (text?.toLowerCase()?.includes(searchedWord.toLowerCase())) {
+                if (text && text.toLowerCase().includes(searchedWord.toLowerCase())) {
                     await header.scrollIntoViewIfNeeded();
                     await header.click();
                     return;
